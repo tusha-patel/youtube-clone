@@ -30,7 +30,7 @@ const Search = () => {
         <div className="mt-18  ">
             <div className="flex flex-row h-[100%-70px] gap-3">
                 <Sidebar />
-                <div className=' mx-auto m-w-[80%] ' >
+                <div className=' mx-auto w-[80%] ' >
                     {results?.map((result, index) => {
                         if (result.type !== "video") return false
                         return <SearchCard key={index} video={result?.video} />
