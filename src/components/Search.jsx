@@ -30,12 +30,15 @@ const Search = () => {
         <div className="mt-18  ">
             <div className="flex flex-row h-[100%-70px] gap-3">
                 <Sidebar />
-                <div className=' mx-auto w-[80%] ' >
-                    {results?.map((result, index) => {
-                        if (result.type !== "video") return false
-                        return <SearchCard key={index} video={result?.video} />
-                    })}
+                <div className="grow h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden">
+                    <div className=" grid grid-cols-1 gap-2 p-2">
+                        {results?.map((item, index) => {
+                            if (item?.type !== "video") return false;
+                            return <SearchCard key={index} video={item?.video} />;
+                        })}
+                    </div>
                 </div>
+
             </div>
         </div>
     )
