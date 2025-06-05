@@ -13,7 +13,6 @@ const Home = () => {
     return (
         <div className=' mt-15 sm:mt-20 flex '>
             <Sidebar />
-            Home page
             {/* videos lists */}
             <div className="h-[calc(100vh-65px)] overflow-y-auto overflow-x-hidden">
                 <ListItems />
